@@ -1,0 +1,54 @@
+<div class="col-sm-12">
+
+
+  <table class="table table-hover">
+    <thead>
+
+      <td>
+        task
+      </td>
+      <td>
+        date
+      </td>
+      <td>
+        name
+      </td>
+      <td>
+        delete 
+      </td>
+      
+      <td>
+        edit
+      </td>
+
+    </thead>
+
+
+    <tbody>
+      <tr *ngFor="let t of allTablets">
+        <td>
+          {{t.description}}
+        </td>
+        <td>
+          {{t.date}}
+        </td>
+        <td>
+          {{t.family}}
+        </td>
+       
+        <td>
+         <i  (click)="deleteTab($event)"   [id]="t._id"  class="fas fa-trash-alt"></i>
+        </td>
+        <td>
+            <i  (click)="editTab($event)"   [id]="'edit'+t._id" class="fas fa-pencil-alt"></i>
+        </td>
+      </tr>
+
+
+    </tbody>
+
+  </table>
+
+
+
+</div>

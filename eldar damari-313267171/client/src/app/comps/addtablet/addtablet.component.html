@@ -1,0 +1,23 @@
+<h1>Add Task</h1>
+<form [formGroup]="tabForm"> 
+  <label>
+    description:
+    <input type="text" formControlName="description">
+  </label> <br/>
+  <label>
+    family members:
+    <select formControlName="family">
+      <option value="dad">dad</option>
+      <option value="mom">mom</option>
+      <option value="ron">ron</option>
+      <option value="viki">viki</option>
+    </select>
+  </label> <br/>
+  <label>
+    Date:
+    <input type="date" formControlName="date">
+  </label> <br/>
+ 
+  <button  [disabled]="!this.tabForm.valid"   
+  type="submit" (click)="sendData()">add Task</button> 
+</form>
